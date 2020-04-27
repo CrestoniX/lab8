@@ -69,7 +69,7 @@ hunter_final_config(
 )
 hunter_final_config(
     PACKAGE "Boost"
-    VERSION "1.64.0"
+    VERSION "1.70.0-p0"
 )
 hunter_final_config(
     PACKAGE "BoostCompute"
