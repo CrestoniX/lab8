@@ -11,11 +11,11 @@ boost::asio::io_context IoContext;
 
 class talk_to_svr {
  public:
-  talk_to_svr(const std::string& username)
+  explicit talk_to_svr(const std::string& username)
       : sock_(IoContext), started_(true), username_(username) {}
-  void connect(ip::tcp::endpoint ep) { sock_.connect(ep); }
+  void connect(boost::asio::ip::tcp::endpoint ep) { sock_.connect(ep); }
 
-  void write(const std::string& msg) { sock_.write_some(buffer(msg)); }
+  void write(const std::string& msg) { sock_.write_some(boost::asio::buffer(msg)); }
 
   void do_ask_clients()
   {
@@ -52,7 +52,8 @@ class talk_to_svr {
     if ( msg.find("login ") == 0) on_login();
     else if ( msg.find("ping") == 0) on_ping(msg);
     else if ( msg.find("clients ") == 0) on_clients(msg);
-    else std::cout << "invalid msg " << msg << std::endl;
+    else
+      std::cout << "invalid msg " << msg << std::endl;
   }
   size_t read_complete(const boost::system::error_code & err, size_t bytes) {
     if (err) return 0;
@@ -64,8 +65,9 @@ class talk_to_svr {
   void read_answer()
   {
     already_read_ = 0;
-    read(sock_, buffer(buff_),
-         boost::bind(&talk_to_svr::read_complete, this, boost::placeholders::_1, boost::placeholders::_2));
+    read(sock_, boost::asio::buffer(buff_),
+         boost::bind(&talk_to_svr::read_complete,
+                     this, boost::placeholders::_1, boost::placeholders::_2));
     process_msg();
   }
 
@@ -78,15 +80,16 @@ class talk_to_svr {
     {
       write_request();
       read_answer();
-      sleep((rand()%7+1));
+      sleep(rand_r(NULL)%7+1);
     }
   }
   std::string username() const { return username_; }
+
  private:
-  ip::tcp::socket sock_;
+  boost::asio::ip::tcp::socket sock_;
   enum { max_msg = 1024 };
   int already_read_;
-  char buff_[max_msg];
+  char buff_[1024];
   bool started_;
   std::string username_;
 };
@@ -94,7 +97,8 @@ class talk_to_svr {
 
 
 int main() {
-  ip::tcp::endpoint ep(ip::address::from_string("127.0.0.1"), 60013);
+  boost::asio::ip::tcp::endpoint ep(
+      boost::asio::ip::address::from_string("127.0.0.1"), 60013);
   std::string client_name;
   std::cin >> client_name;
     talk_to_svr client(client_name);
