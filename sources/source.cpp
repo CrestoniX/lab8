@@ -15,7 +15,8 @@ class talk_to_svr {
       : sock_(IoContext), started_(true), username_(username) {}
   void connect(boost::asio::ip::tcp::endpoint ep) { sock_.connect(ep); }
 
-  void write(const std::string& msg) { sock_.write_some(boost::asio::buffer(msg)); }
+  void write(const std::string& msg)
+  { sock_.write_some(boost::asio::buffer(msg)); }
 
   void do_ask_clients()
   {
