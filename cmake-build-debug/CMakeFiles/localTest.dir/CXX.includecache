@@ -7322,6 +7322,76 @@ boost/config.hpp
 boost/is_placeholder.hpp
 -
 
+/home/kirill2000/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install/include/boost/bind/bind.hpp
+boost/config.hpp
+-
+boost/ref.hpp
+-
+boost/mem_fn.hpp
+-
+boost/type.hpp
+-
+boost/is_placeholder.hpp
+-
+boost/bind/arg.hpp
+-
+boost/detail/workaround.hpp
+-
+boost/visit_each.hpp
+-
+boost/core/enable_if.hpp
+-
+boost/core/is_same.hpp
+-
+utility
+-
+boost/bind/storage.hpp
+-
+boost/bind/bind_template.hpp
+-
+boost/bind/bind_template.hpp
+-
+boost/bind/bind_template.hpp
+-
+boost/bind/bind_cc.hpp
+-
+boost/bind/bind_cc.hpp
+-
+boost/bind/bind_cc.hpp
+-
+boost/bind/bind_cc.hpp
+-
+boost/bind/bind_cc.hpp
+-
+boost/bind/bind_mf_cc.hpp
+-
+boost/bind/bind_mf2_cc.hpp
+-
+boost/bind/bind_mf_cc.hpp
+-
+boost/bind/bind_mf_cc.hpp
+-
+boost/bind/bind_mf2_cc.hpp
+-
+boost/bind/bind_mf_cc.hpp
+-
+boost/bind/bind_mf2_cc.hpp
+-
+boost/bind/bind_mf_cc.hpp
+-
+boost/bind/bind_mf2_cc.hpp
+-
+boost/bind/placeholders.hpp
+-
+
+/home/kirill2000/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install/include/boost/bind/bind_cc.hpp
+
+/home/kirill2000/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install/include/boost/bind/bind_mf2_cc.hpp
+
+/home/kirill2000/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install/include/boost/bind/bind_mf_cc.hpp
+
+/home/kirill2000/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install/include/boost/bind/bind_template.hpp
+
 /home/kirill2000/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install/include/boost/bind/mem_fn.hpp
 boost/config.hpp
 -
@@ -7375,6 +7445,18 @@ boost/bind/mem_fn_cc.hpp
 /home/kirill2000/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install/include/boost/bind/mem_fn_template.hpp
 
 /home/kirill2000/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install/include/boost/bind/mem_fn_vw.hpp
+
+/home/kirill2000/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install/include/boost/bind/placeholders.hpp
+boost/bind/arg.hpp
+-
+boost/config.hpp
+-
+
+/home/kirill2000/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install/include/boost/bind/storage.hpp
+boost/config.hpp
+-
+boost/bind/arg.hpp
+-
 
 /home/kirill2000/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install/include/boost/call_traits.hpp
 boost/config.hpp
@@ -8119,6 +8201,10 @@ cstddef
 /home/kirill2000/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install/include/boost/core/enable_if.hpp
 boost/config.hpp
 /home/kirill2000/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install/include/boost/core/boost/config.hpp
+
+/home/kirill2000/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install/include/boost/core/is_same.hpp
+boost/config.hpp
+-
 
 /home/kirill2000/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install/include/boost/core/no_exceptions_support.hpp
 boost/config.hpp
@@ -14682,6 +14768,8 @@ boost/utility/detail/result_of_iterate.hpp
 
 /home/kirill2000/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install/include/boost/version.hpp
 
+/home/kirill2000/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install/include/boost/visit_each.hpp
+
 /home/kirill2000/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install/include/boost/weak_ptr.hpp
 boost/smart_ptr/weak_ptr.hpp
 -
@@ -14739,10 +14827,16 @@ boost/winapi/basic_types.hpp
 -
 
 /home/kirill2000/lab8/sources/source.cpp
+functional
+-
 random
 -
 chrono
 -
 header.hpp
+/home/kirill2000/lab8/sources/header.hpp
+boost/bind/bind.hpp
+-
+ctime
 -
 
